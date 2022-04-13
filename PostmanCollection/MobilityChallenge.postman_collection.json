@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "75dcc7dd-d3e0-43c7-8fd9-9b95acf486f5",
+		"name": "MobilityChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44347/api/UrlModals/getall",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44347",
+					"path": [
+						"api",
+						"UrlModals",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"longUrl\":\"https://www.youtube.com/\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44347/api/UrlModals/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44347",
+					"path": [
+						"api",
+						"UrlModals",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddCustom",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"longUrl\":\"https://www.facebook.com/\",\r\n    \"customName\":\"ofkfacebook\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44347/api/UrlModals/addcustom",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44347",
+					"path": [
+						"api",
+						"UrlModals",
+						"addcustom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Redirect",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44347/api/UrlModals/redirect?shortUrl=http://youtube/DBAE2D&redirect=true",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44347",
+					"path": [
+						"api",
+						"UrlModals",
+						"redirect"
+					],
+					"query": [
+						{
+							"key": "shortUrl",
+							"value": "http://youtube/DBAE2D"
+						},
+						{
+							"key": "redirect",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUrlWithoutRedirection",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"longUrl\":\"https://www.facebook.com/\",\r\n    \"customName\":\"ofkfacebook\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44347/api/UrlModals/redirect?shortUrl=http://youtube/DBAE2D&redirect=false",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44347",
+					"path": [
+						"api",
+						"UrlModals",
+						"redirect"
+					],
+					"query": [
+						{
+							"key": "shortUrl",
+							"value": "http://youtube/DBAE2D"
+						},
+						{
+							"key": "redirect",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
